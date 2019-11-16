@@ -1,4 +1,4 @@
-package arrays;
+//package arrays;
 
 import java.util.Random;
 
@@ -34,7 +34,16 @@ public static void main(String[] args) {
 	}
 
 	//6. use a while loop to repeat step 5 until a robot has reached the top of the screen.
-		//while(y<)
+	int y = rob[0].getY();
+	int x = rob[0].getX();
+		while(y<0 && x <0)
+	{
+	for(int x1 = 0; x1<5; x1++)
+	{
+		int number = num.nextInt(50);
+		rob[x1].setY(number);
+	}
+	}
 	
 	
 	//7. declare that robot the winner and throw it a party!
