@@ -6,6 +6,7 @@
 
 package arrays;
 
+import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
@@ -68,18 +69,24 @@ public class _02_FindTheHiddenButton implements ActionListener{
 		//15. Use Thread.sleep(1000); to pause the program.
 		//    Surround it with a try/catch - use Eclipse helper for this
 		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		//16. Set the text of the JButton located at hiddenButton to be blank.
-		
+		button[1].setText(null);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		JButton buttonClicked = (JButton)e.getSource();
-		
+	
 		//17. if the hiddenButton is clicked, tell the user that they win.
-	//	if(buttonClicked == hiddenButton)
+		if(buttonClicked.getX() == hiddenButton)
 		{
-			
+			JOptionPane.showMessageDialog(null, "You won!!");
 		}
 		//18. else tell them to try again
 		//else
